@@ -48,6 +48,12 @@ body {
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
+    @media (max-width: $r_desk_xl) {
+        max-width: 960px;
+    }
+    @media (max-width: $r_desk_lg) {
+        max-width: 720px;
+    }
 }
 .wrapper {
     width: 100%;
@@ -66,6 +72,9 @@ ul {
         align-items: stretch;
         gap: 30px;
         flex-wrap: wrap;
+        @media (max-width: $r_desk_xl) {
+            gap: 25px;
+        }
     }
     &__header {
         flex-basis: 367px;
@@ -78,6 +87,13 @@ ul {
         gap: 36px;
         background: $bg-grey;
         box-sizing: border-box;
+        @media (max-width: $r_desk_xl) {
+            flex-basis: 301px;
+        }
+        @media (max-width: $r_desk_lg) {
+            flex-basis: auto;
+            flex-direction: row;
+        }
     }
     &__main {
         flex-basis: 770px;
@@ -85,6 +101,14 @@ ul {
         display: flex;
         justify-content: space-between;
         align-items: stretch;
+        @media (max-width: $r_desk_xl) {
+            flex-basis: 630px;
+        }
+        @media (max-width: $r_desk_lg) {
+            min-height: 840px;
+            flex-basis: auto;
+            flex-wrap: wrap;
+        }
     }
     &__footer {
         width: 100%;
@@ -94,6 +118,12 @@ ul {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
+        @media (max-width: $r_desk_lg) {
+            height: 120px;
+            padding-right: 0;
+            margin-top: 0;
+        }
     }
 }
 .border {
@@ -142,6 +172,9 @@ ul {
             -moz-border-radius: 50%;
             -ms-border-radius: 50%;
             -o-border-radius: 50%;
+        }
+        @media (max-width: $r_desk_lg) {
+            height: auto;
         }
     }
     &__menu {
@@ -203,6 +236,17 @@ ul {
             &_6 icon {
                 background: #2bc771;
             }
+            @media (max-width: $r_desk_lg) {
+                width: 83px;
+                height: 115px;
+                flex-direction: column;
+                gap: 23px 0;
+            }
+        }
+        @media (max-width: $r_desk_lg) {
+            height: 260px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
         }
         &__icon {
             width: 83px;
@@ -220,6 +264,9 @@ ul {
                     width: 30px;
                     fill: #ffffff;
                 }
+            }
+            @media (max-width: $r_desk_lg) {
+                height: 60px;
             }
         }
     }
@@ -260,6 +307,13 @@ nav {
         padding-top: 22px;
         background: $bg-grey;
         box-sizing: border-box;
+        @media (max-width: $r_desk_xl) {
+            flex-basis: 580px;
+        }
+        @media (max-width: $r_desk_lg) {
+            flex-basis: auto;
+            max-width: 100%;
+        }
     }
     &__title {
         width: 170px;
@@ -288,6 +342,9 @@ nav {
         max-height: 680px;
         padding-bottom: 30px;
         margin: 30px;
+        @media (max-width: $r_desk_xl) {
+            width: auto;
+        }
     }
     &__personal {
         width: 100%;
@@ -303,6 +360,9 @@ nav {
         color: #d3d3d3;
         & p {
             margin: 14px 0;
+        }
+        @media (max-width: $r_desk_xl) {
+            width: 280px;
         }
     }
     &__term {
@@ -364,6 +424,15 @@ nav {
         justify-content: space-between;
         align-items: center;
         gap: 10px;
+        @media (max-width: $r_desk_xl) {
+            flex-basis: 50px;
+        }
+        @media (max-width: $r_desk_lg) {
+            flex-basis: 100%;
+            min-height: 50px;
+            flex-direction: row;
+        }
+
     }
 }
 .why {
@@ -431,6 +500,9 @@ nav {
         &:hover {
             background: #3868e6;
         }
+        @media (max-width: $r_desk_xl) {
+            width: 50px;
+        }
 
     }
     &__download {
@@ -444,6 +516,9 @@ nav {
         &:hover {
             background: #3868e6;
         }
+        @media (max-width: $r_desk_xl) {
+            width: 50px;
+        }
     }
     & button {
         width: 60px;
@@ -456,6 +531,9 @@ nav {
         &:hover {
             background: #3868e6;
          }
+         @media (max-width: $r_desk_xl) {
+            width: 50px;
+         }
     }
 }.footer {
     &__inform {
@@ -463,13 +541,25 @@ nav {
         line-height: 180%;
         font-weight: 400;
         color: #fff;
+         @media (max-width: $r_desk_lg) {
+            order: 2;
+            margin-top: 0;
+        }
     }
+   
     &__icons {
         display: flex;
         justify-content: end;
         align-items: center;
         gap: 12px;
+        @media (max-width: $r_desk_lg) {
+            order: 1;
+            width: 100%;
+            justify-content: space-around;
+            margin-top: 0;
+        }
     }
+    
     &__icon {
         width: 42px;
         height: 42px;
