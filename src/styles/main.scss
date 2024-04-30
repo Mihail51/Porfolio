@@ -20,13 +20,10 @@ $r_desk_1600: 1600px;
 html {
     font-size: 10px;
     scroll-behavior: smooth;
-}
-*:hover {
-    pointer-events: none;
-}
+}  
 body {
     max-width: 1920px;
-    max-height: 1080px;
+/*    max-height: 1080px;  */
     font-family: $font-poppins;
     font-size: 1.6rem;
     color: $text-grey;
@@ -76,13 +73,16 @@ ul {
 
 .page {
     &__wrapper {
-        margin: 140px auto;
+        margin-top: 140px;  
         justify-content: space-between;
         align-items: stretch;
         gap: 30px;
         flex-wrap: wrap;
         @media (max-width: $r_desk_xl) {
             gap: 25px;
+        }
+        @media (max-width: $r_mob_sm) {
+            margin-top: 55px;
         }
     }
     &__header {
@@ -124,6 +124,7 @@ ul {
         }
         @media (max-width: $r_desk_lg) {
             min-height: 840px;
+            max-height: unset;
             flex-basis: auto;
             flex-wrap: wrap;
         }
@@ -297,6 +298,7 @@ ul {
                 align-items: center;
                 & svg {
                     width: 30px;
+                    height: 100%;
                     fill: #ffffff;
                 }
             }
@@ -361,6 +363,8 @@ nav {
         @media (max-width: $r_desk_lg) {
             flex-basis: auto;
             max-width: 100%;
+            min-height: 790px;
+            max-height: unset;
         }
     }
     &__title {
@@ -381,6 +385,7 @@ nav {
         }
         & svg {
             width: 30px;
+            height: 100%;
             fill: #ffffff;
             order: 1;
         }
@@ -393,6 +398,11 @@ nav {
         @media (max-width: $r_desk_xl) {
             width: auto;
         }
+        @media (max-width: $r_desk_lg) {
+            min-height: 680px;
+            max-height: unset;
+            margin-bottom: 0;
+        }
     }
     &__personal {
         width: 100%;
@@ -400,6 +410,11 @@ nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media (max-width: $r_mob_sm) {
+            height: auto;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
     }
     &__data {
         width: 330px;
@@ -453,6 +468,11 @@ nav {
         display: grid;
         grid-template-columns: repeat(4,1fr);
         gap: 9px;
+        @media (max-width: $r_mob_sm) {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
     }
     &__fact {
         padding-top: 42px;
@@ -463,6 +483,9 @@ nav {
         align-items: center;
         gap: 10px;
         background: $black;
+        @media (max-width: $r_mob_sm) {
+            width: 115px;
+        }
     }
     &__aside {
         flex-basis: 60px;
@@ -479,6 +502,9 @@ nav {
             flex-basis: 100%;
             min-height: 50px;
             flex-direction: row;
+        }
+        @media (max-width: $r_mob_sm) {
+            justify-content: space-evenly;
         }
 
     }
@@ -497,6 +523,9 @@ nav {
         margin: 0;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        @media (max-width: $r_mob_sm) {
+            display: block;
+        }
     }
     &__cause {
         height: 32px;
@@ -535,6 +564,7 @@ nav {
     & a svg, & button svg {
         fill: #fff;
         width: 30px;
+        height: 100%;
     }
     &__chat {
         width: 60px;
@@ -578,6 +608,7 @@ nav {
         border: none;
         &:hover {
             background: #3868e6;
+            cursor: pointer;
          }
          @media (max-width: $r_desk_xl) {
             width: 50px;
@@ -606,11 +637,18 @@ nav {
             justify-content: space-around;
             margin-top: 0;
         }
+        @media (max-width: $r_mob_sm) {
+            gap: 0;
+        }
     }
     
     &__icon {
         width: 42px;
         height: 42px;
+        @media (max-width: $r_mob_sm) {
+            width: 22px;
+            height: 22px;
+        }
     }
     &__link {
         width: 100%;
