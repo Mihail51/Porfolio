@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="fonts/stylesheet.css">
 
 </head>
+
 <body>
+    <label>
+        <input type="checkbox" id="team-change" class="visually-hidden" onchange="changeTheme(this.checked)">
+    </label>
     <div class="border color__border">
         <ul class="list border__list">
             <li class="item border_item border__item_1"></li>
@@ -22,6 +26,10 @@
         <div class="container page__container">
             <div class="wrapper page__wrapper">
                 <header class="header page__header">
+                    <div class="team-switches header__team-switches">
+                        <label for="team-change" class="header__team-switch header__team-switch_light"></label>
+                        <label for="team-change" class="header__team-switch header__team-switch_dark"></label>
+                    </div>
                     <picture class="image header__image">
                         <!--1x: 293px; 2x: 586px-->
                         <source>
@@ -287,6 +295,16 @@
             </div>
         </div>
     </div>
+<!--Переключатель тем-->
+    <script>
+  function changeTheme(isChecked) {
+    if (isChecked) {
+      document.body.setAttribute('light', '');
+    } else {
+      document.body.removeAttribute('light');
+    }
+  }
+</script>
     
 </body>
 </html>

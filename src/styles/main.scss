@@ -6,6 +6,26 @@ $text-dark: #d2d2d2;
 $black: #19191a;
 $bg-grey: #1e1e1f;
 
+:root {
+    --var-body-bg: #19191a;
+    --var-header-bg: #1e1e1f;
+    --var-dl-text: #d3d3d3;
+    --var-white-text: #ffffff;
+    --var-fact-quantity-text: #ffffff;
+    --var-main__fact-bg: #19191a;
+}
+
+
+[light] {
+    --var-body-bg: #f3f3f5;
+    --var-header-bg: #ffffff;
+    --var-dl-text: #333333;
+    --var-white-text: #333333;
+    --var-fact-quantity-text: #3968e6;
+    --var-main__fact-bg: #f3f3f5;
+}
+
+
 $r_mob_360: 360px;
 $r_mob_400: 400px;
 $r_mob_500: 500px;
@@ -27,7 +47,7 @@ body {
     font-family: $font-poppins;
     font-size: 1.6rem;
     color: $text-grey;
-    background-color: $black;
+    background-color: var(--var-body-bg);
     overflow-x: hidden;
 }
 .visually-hidden {
@@ -86,6 +106,7 @@ ul {
         }
     }
     &__header {
+        position: relative;
         flex-basis: 367px;
         max-height: 790px;
         padding-top: 45px;
@@ -94,7 +115,8 @@ ul {
         justify-content: space-between;
         align-items: center;
         gap: 36px;
-        background: $bg-grey;
+        background: var(--var-header-bg);
+        box-shadow: 0 0 44px 0 rgba(25, 216, 255, 0.16);
         box-sizing: border-box;
         @media (max-width: $r_desk_xl) {
             flex-basis: 301px;
@@ -209,7 +231,7 @@ ul {
             height: 60px;
             font-size: 1.8rem;
             line-height: 170%;
-            color: $text-dark;
+            color: var(--var-white-text);
             font-weight: 500;
             background: inherit;
             box-sizing: border-box;
@@ -321,7 +343,7 @@ ul {
         font-weight: 600;
         color: $text-grey;
         &__name {
-            color: #fff;
+            color: var(--var-white-text);
         }
         @media (max-width: $r_tab_md) {
             font-size: 1.4rem;
@@ -342,6 +364,31 @@ ul {
         font-weight: 400;
         color: $text-grey;
     }
+    &__team-switches {
+        position: absolute;
+        width: 40px;
+        height: 20px;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__team-switch {
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+        -o-border-radius: 100%;
+        &_light {
+            background: #ffffff;
+        }
+        &_dark {
+            background: #1e1e1f;
+        }
+    }
 }
 nav {
     width: 100%;
@@ -355,7 +402,8 @@ nav {
         max-width: 695px;
         max-height: 790px;
         padding-top: 22px;
-        background: $bg-grey;
+        background: var(--var-header-bg);
+        box-shadow: 0 0 44px 0 rgba(25, 216, 255, 0.16);
         box-sizing: border-box;
         @media (max-width: $r_desk_xl) {
             flex-basis: 580px;
@@ -420,7 +468,7 @@ nav {
         width: 330px;
         height: 100%;
         font-size: 1.6rem;
-        color: #d3d3d3;
+        color: var(--var-dl-text);
         & p {
             margin: 14px 0;
         }
@@ -482,7 +530,7 @@ nav {
         justify-content: space-between;
         align-items: center;
         gap: 10px;
-        background: $black;
+        background: var(--var-main__fact-bg);
         @media (max-width: $r_mob_sm) {
             width: 115px;
         }
@@ -514,7 +562,7 @@ nav {
         font-size: 2rem;
         line-height: 160%;
         font-weight: 700;
-        color: #fff;
+        color: var(--var-white-text);
         margin: 0;
     }
     &__causes {
@@ -549,7 +597,7 @@ nav {
         font-size: 4rem;
         line-height: 80%;
         font-weight: 700;
-        color: #fff;
+        color: var(--var-fact-quantity-text);
         margin: 0;
     }
     &__name {
@@ -619,7 +667,7 @@ nav {
         font-size: 1.6rem;
         line-height: 180%;
         font-weight: 400;
-        color: #fff;
+        color: var(--var-white-text);
          @media (max-width: $r_desk_lg) {
             order: 2;
             margin-top: 0;
