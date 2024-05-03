@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <meta name="description" content="описание не длиннее 155 символов">
+    <meta name="keywords" content="мета-теги, шаблон, html, css">
     <link rel="stylesheet" href="fonts/stylesheet.css">
 
 </head>
@@ -30,6 +32,14 @@
                         <label for="team-change" class="header__team-switch header__team-switch_light"></label>
                         <label for="team-change" class="header__team-switch header__team-switch_dark"></label>
                     </div>
+                    <!-- Language menu -->
+                    <div class="languages main__languages">
+                        <select name="change-lang" id="change-lang" class="change-lang">
+                            <option class="lanquage__button lanquage__button_en lanquage__button_en" value="en">En</option>
+                            <option class="lanquage__button lanquage__button_ru lanquage__button_ru" value="ru">Ru</option>
+                            <option class="lanquage__button lanquage__button_heb lanquage__button_he" value="he">Heb</option>
+                        </select>
+                    </div>
                     <picture class="image header__image">
                         <!--1x: 293px; 2x: 586px-->
                         <source>
@@ -40,9 +50,9 @@
                         <img width="239" height="239" src="images/foto.jpg" srcset="images/foto@2x.jpg 2x" alt="">
                     </picture>
                     <ul class="name header__name">
-                        <li class="greeting header__greeting">Hi, I&apos;m <span class="header__greeting__name">Mihail Gofman</span></li>
-                        <li class="specialty header__specialty">HTML Coder</li>
-                        <li class="specialization header__specialization">HTML and CSS layout, Adaptation for mobile devices, Email layout </li>
+                        <li class="greeting header__greeting"><span class="lng__header__greeting">Hi, I&apos;m </span> <span class="header__greeting__name дтп__header__greeting__name">Mihail Gofman</span></li>
+                        <li class="specialty header__specialty lng__header__specialty">HTML Coder</li>
+                        <li class="specialization header__specialization lng__header__specialization">HTML and CSS layout, Adaptation for mobile devices, Email layout </li>
                     </ul>
                     <nav>
                         <ul class="menu header__menu">
@@ -54,7 +64,7 @@
                                         </svg>
                                     </a>
                                 </icon>
-                                Profile
+                                <span class="lng__header__menu__item_1">Profile</span>
                             </li>
                             <li class="item menu__item header__menu__item header__menu__item_2">
                                 <icon class="icon menu__icon header__menu__icon">
@@ -64,7 +74,7 @@
                                         </svg>
                                     </a>
                                 </icon>
-                                Resume
+                                <span class="lng__header__menu__item_2">Resume</span>
                             </li>
                             <li class="item menu__item header__menu__item header__menu__item_3">
                                 <icon class="icon menu__icon header__menu__icon">
@@ -74,7 +84,7 @@
                                         </svg>
                                     </a>
                                 </icon>
-                                Portfolio
+                                <span class="lng__header__menu__item_3">Portfolio</span>
                             </li>
                             <li class="item menu__item header__menu__item header__menu__item_4">
                                 <icon class="icon menu__icon header__menu__icon">
@@ -84,7 +94,7 @@
                                         </svg>
                                     </a>
                                 </icon>
-                                Services
+                                <span class="lng__header__menu__item_4">Services</span>
                             </li>
                             <li class="item menu__item header__menu__item header__menu__item_5">
                                 <icon class="icon menu__icon header__menu__icon">
@@ -94,7 +104,7 @@
                                         </svg>
                                     </a>
                                 </icon>
-                                Testimonials
+                                <span class="lng__header__menu__item_5">Testimonials</span>
                             </li>
                             <li class="item menu__item header__menu__item header__menu__item_6">
                                 <icon class="icon menu__icon header__menu__icon">
@@ -104,7 +114,7 @@
                                         </svg>
                                     </a>
                                 </icon>
-                                Contacts
+                                <span class="lng__header__menu__item_6">Contacts</span>
                             </li>
                         </ul>
                     </nav>
@@ -112,7 +122,7 @@
                 <main class="main page__main">
                     <section class="portfile main__portfile" id="portfile">
                         <div class="title main__title">
-                            <h1>Profile</h1>
+                            <h1 class="lng__main__title">Profile</h1>
                             <svg>
                                 <use xlink:href="#identity-card"></use>
                             </svg>
@@ -129,88 +139,88 @@
                                     <img width="180" height="180" src="images/foto.jpg" srcset="images/foto@2x.jpg 2x" alt="">
                                 </picture>
                                 <dl class="data main__data">
-                                    <dt class="term main__term main__term_1">Name</dt>
-                                    <dd class="description main__description main__description_1">Mihail Gofman</dd>
+                                    <dt class="term main__term main__term_1 lng__main__term_1">Name</dt>
+                                    <dd class="description main__description main__description_1 lng__main__description_1">Mihail Gofman</dd>
                                     <p></p>
-                                    <dt class="term main__term main__term_2">Date of birth</dt>
-                                    <dd class="description main__description main__description_2">November 21, 1951</dd>
+                                    <dt class="term main__term main__term_2 lng__main__term_2">Date of birth</dt>
+                                    <dd class="description main__description main__description_2 lng__main__description_2">November 21, 1951</dd>
                                     <p></p>
-                                    <dt class="term main__term main__term_3">Address</dt>
-                                    <dd class="description main__description main__description_3">Ashkelon, Israel</dd>
+                                    <dt class="term main__term main__term_3 lng__main__term_3">Address</dt>
+                                    <dd class="description main__description main__description_3 lng__main__description_3">Ashkelon, Israel</dd>
                                     <p></p>
-                                    <dt class="term main__term main__term_4">Phone</dt>
+                                    <dt class="term main__term main__term_4 lng__main__term_4">Phone</dt>
                                     <dd class="description main__description main__description_4">+972-50-836-44-07</dd>
                                     <p></p>
-                                    <dt class="term main__term main__term_5">Email</dt>
+                                    <dt class="term main__term main__term_5 lng__main__term_5">Email</dt>
                                     <dd class="description main__description main__description_5">Mihail51@Gmail.com</dd>
                                     <p></p>
-                                    <dt class="term main__term main__term_6">Website</dt>
+                                    <dt class="term main__term main__term_6 lng__main__term_6">Website</dt>
                                     <dd class="description main__description main__description_6">www.mihail51.info/</dd>
                                 </dl>
                             </div>
                             <hr class="line main__line">
-                            <p class="about main__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nos trud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat</p>
+                            <p class="about main__about lng__main__about">Hello, I'm Mikhail Goffman, a beginner HTML layout designer. I create responsive and cross-browser layouts and can structure and optimize code for better performance and accessibility. In my portfolio you will find examples of my work demonstrating my skills in using semantic tags, attributes and microformats. I strive for good design and UX to create pages that are aesthetically pleasing and informative.</p>
                             <div class="why main__why">
-                                <h2 class="title why__title">Why Choose Me ?</h2>
+                                <h2 class="title why__title lng__why__title">Why Choose Me ?</h2>
                                 <ul class="causes why__causes">
                                     <li class="cause why__cause">
                                         <svg><use xlink:href="#check"></use></svg>
-                                         Simplicity and creativity
+                                        <span class="lng__why__cause_1">Simplicity and creativity</span>
                                     </li>
                                     <li class="cause why__cause">
                                         <svg><use xlink:href="#check"></use></svg>
-                                        Empathize with the users
+                                        <span class="lng__why__cause_2">Empathize with the users</span>
                                     </li>
                                     <li class="cause why__cause">
                                         <svg><use xlink:href="#check"></use></svg>
-                                        Creative Design
+                                        <span class="lng__why__cause_3">Creative Design</span>
                                     </li>
                                     <li class="cause why__cause">
                                         <svg><use xlink:href="#check"></use></svg>
-                                        Customer Journey Map
+                                        <span class="lng__why__cause_4">Customer Journey Map</span>
                                     </li>
                                     <li class="cause why__cause">
                                         <svg><use xlink:href="#check"></use></svg>
-                                        UX design process
+                                        <span class="lng__why__cause_5">UX design process</span>
                                     </li>
                                     <li class="cause why__cause">
                                         <svg><use xlink:href="#check"></use></svg>
-                                        Prototyping Deliverables
+                                        <span class="lng__why__cause_6">Prototyping Deliverables</span>
                                     </li>
                                 </ul>
                             </div>
                             <ul class="facts main__facts">
                                 <li class="fact main__fact main__fact_1">
                                     <p class="quantity fact__quantity">30+</p>
-                                    <p class="name fact__name">Ongoing Project</p>
+                                    <p class="name fact__name lng__fact__name_1">Ongoing Project</p>
                                 </li>
                                 <li class="fact main__fact main__fact_2">
                                     <p class="quantity fact__quantity">200</p>
-                                    <p class="name fact__name">Project Done</p>
+                                    <p class="name fact__name lng__fact__name_2">Project Done</p>
                                 </li>
                                 <li class="fact main__fact main__fact_3">
                                     <p class="quantity fact__quantity">50+</p>
-                                    <p class="name fact__name">Clinets</p>
+                                    <p class="name fact__name lng__fact__name_3">Clinets</p>
                                 </li>
                                 <li class="fact main__fact main__fact_4">
                                     <p class="quantity fact__quantity">40+</p>
-                                    <p class="name fact__name">Country</p>
+                                    <p class="name fact__name lng__fact__name_4">Country</p>
                                 </li>
                             </ul>
                         </div>
                     </section>
                     <aside class="aside main__aside">
-                        <a href="#" class="chat aside__chat">
+                        <a title="chat" href="#" class="chat aside__chat">
                             <svg>
                                 <svg><use xlink:href="#pencil"></use></svg>
                             </svg>
                         </a>
-                        <button onclick="window.print()" class="print aside__print">
+                        <button title="print" onclick="window.print()" class="print aside__print">
                             <svg>
                                 <use xlink:href="#printer"></use>
                             </svg>
                         </button>
-                        <a href="index.html/#portfile" class="download aside__download" download="download">
+                        <a title="download" href="index.html/#portfile" class="download aside__download" download="download">
                             <svg>
                                 <use xlink:href="#download"></use>
                             </svg>
@@ -218,7 +228,7 @@
                     </aside>
                 </main>
                 <footer class="footer page__footer">
-                    <p class="inform footer__inform">&copy; 2020 Ruller. All Rights Reserved.</p>
+                    <p class="inform footer__inform">&copy; 2020 Ruller. <span class="lng__footer__inform">All Rights Reserved.</span></p>
                     <ul class="icons footer__icons">
                         <li class="icon footer__icon footer__icon_1">
                             <a title="behance" href="https://www.behance.net/mihail51" target="_blank" class="link footer__link">
@@ -305,6 +315,9 @@
     }
   }
 </script>
+
+<script src="js/lang.js"></script>    
+<script src="js/app.js"></script>
     
 </body>
 </html>
