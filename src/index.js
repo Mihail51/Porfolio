@@ -3,7 +3,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './styles/main.scss';
-import './index.html';
+import './index.html'
 // core version + navigation, pagination modules:
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
